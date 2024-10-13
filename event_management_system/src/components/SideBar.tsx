@@ -12,10 +12,10 @@ import logout from './icons/logot-icon.svg';
 
 const menuItems = [
   { icon: db, label: 'Dashboard', path: '/dashboard' },
-  { icon: create, label: 'Create Events', path: '/create' },
-  { icon: cal, label: 'Events', path: '/events' },
-  { icon: database, label: 'Database', path: '/database' },
-  { icon: settings, label: 'Settings', path: '/settings' },
+  { icon: create, label: 'Create Events', path: '/dashboard/event' },
+  { icon: cal, label: 'Events', path: '/dashboard/events' },
+  { icon: database, label: 'Database', path: '/dashboard/database' },
+  { icon: settings, label: 'Settings', path: '/dashboard/settings' },
 ];
 
 const SideBar: React.FC = () => {
