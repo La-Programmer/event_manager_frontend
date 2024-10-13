@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'haylard': ['haylard-display', 'ui-monospace', 'SFMono-Regular'],
+      'poppins': ['poppins-font', 'ui-monospace', 'SFMono-Regular']
+    }
   },
   plugins: [],
 }

@@ -19,7 +19,12 @@ import PersonIcon from "../components/icons/PersonIcon";
 import CopyIcon from "../components/icons/CopyIcon";
 import Footer from "../components/Footer";
 
-const HomePage = () => {
+interface HomePageProps{
+  gotoLogin: () => void;
+  gotoSignup: () => void;
+}
+
+const HomePage = ({ gotoLogin, gotoSignup }: HomePageProps) => {
   return (
     <>
         <nav className="mx-auto mt-10 flex h-[55px] w-[540px] justify-between rounded-[30px] bg-[#D9D9D980] font-bold">
@@ -31,11 +36,11 @@ const HomePage = () => {
               <Link to={''} className="text-[#000] no-underline hover:text-[#A774E7]">
                 <li className="mx-3">Pricing</li>
               </Link>
-              <Link to={''} className="no-underline">
-                <li className="mx-3 text-[#000] hover:text-[#A774E7]">
+              <li>
+                <Link to='/auth' className="mx-3 text-[#000] hover:text-[#A774E7]" onClick={gotoLogin}>
                   Log in
-                </li>
-              </Link>
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -50,8 +55,8 @@ const HomePage = () => {
             Your One-Stop Solution for Seamless Events.
           </div>
           <div className="m-3 flex justify-center">
-            <button className="mx-3 h-10 w-40 rounded-[20px] bg-[#000] text-white hover:bg-[#3d3d3d]">
-              <span> Join for free</span>
+            <button className="mx-3 h-10 w-40 rounded-[20px] bg-[#000] text-white hover:bg-[#3d3d3d]" onClick={gotoSignup}>
+              <Link to='/auth'> Join for free</Link>
             </button>
 
             <button className="flex h-10 w-40 items-center justify-center rounded-3xl border border-black hover:bg-gray-200">
